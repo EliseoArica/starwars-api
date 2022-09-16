@@ -11,5 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Eliseo Arica",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-auto-swagger": "^2.8.2"
+  }
 }

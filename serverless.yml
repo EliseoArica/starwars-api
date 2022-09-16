@@ -51,3 +51,4 @@ resources:
         KeySchema:
           - AttributeName: id
             KeyType: HASH
+            
