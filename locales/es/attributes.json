@@ -1,0 +1,16 @@
+{
+    "name": "nombre",
+    "rotation_period": "periodo_de_rotacion",
+    "orbital_period": "periodo_orbital",
+    "diameter": "diametro",
+    "climate": "clima",
+    "gravity": "gravedad",
+    "terrain": "terreno",
+    "surface_water": "agua_superficial",
+    "population": "poblacion",
+    "residents": "residentes",
+    "films": "peliculas",
+    "created": "fecha_de_creacion",
+    "edited": "fecha_de_edicion",
+    "url": "url"
+}

@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.1216.0",
+    "axios": "^0.27.2",
+    "uuid": "^9.0.0"
+  },
+  "name": "starwars-api",
+  "description": "REST API built with Node JS, serverless framework, AWS Lambda and DynamoDB",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eliseo Arica",
+  "license": "ISC"
+}

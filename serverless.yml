@@ -1,0 +1,53 @@
+service: starwars-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - 'dynamodb:PutItem'
+            - 'dynamodb:Get*'
+            - 'dynamodb:Scan*'
+            - 'dynamodb:UpdateItem'
+            - 'dynamodb:DeleteItem'
+          Resource:
+            - arn:aws:dynamodb:us-east-1:295656919448:table/galaxias
+
+functions:
+  createGalaxy:
+    handler: src/Galaxy/createGalaxy.createGalaxy
+    events:
+      - httpApi:
+          path: /galaxies
+          method: post
+  getGalaxies:
+    handler: src/Galaxy/getGalaxies.getGalaxies
+    events:
+      - httpApi:
+          path: /galaxies
+          method: get
+  getPlanets:
+    handler: src/Planet/getPlanets.getPlanets
+    events:
+      - httpApi:
+          path: /planets
+          method: get
+
+resources:
+  Resources:
+    galaxias:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: galaxias
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
