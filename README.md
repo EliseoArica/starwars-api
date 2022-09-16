@@ -49,7 +49,7 @@ Existen 3 endpoints en total: Uno de tipo POST y dos de tipo GET. Se recomienda 
 }
 ```
 ```
-  https://8cld8yrraj.execute-api.us-east-1.amazonaws.com/planets
+  https://8cld8yrraj.execute-api.us-east-1.amazonaws.com/galaxies
 ```
 
 - GET: Obtener registros de la tabla galaxias
